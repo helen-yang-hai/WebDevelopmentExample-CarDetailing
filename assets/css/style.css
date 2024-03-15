@@ -1,0 +1,280 @@
+/*Author: Yang Hai, student id: 101391045*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    margin: 1em;
+    background-color: rgb(249,249,249);
+}
+
+h1{
+    font-size:1.5em;
+}
+span{
+    color: darkred;
+}
+
+header a{
+    color: dimgray;
+    text-decoration: none;
+}
+
+#social-media-icon{
+    font-size: 1.5em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/-1;
+    border-top: dimgray solid 1px;
+    border-bottom: dimgray solid 1px;
+    padding: 1em;
+    margin-bottom: .25em;
+}
+
+
+#navbar {
+    background-color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    grid-column: 1/-1;
+    justify-content: space-between;
+}
+
+#navbar>ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#navbar li a {
+    text-decoration: none;
+    display: inline-block;
+    color: ghostwhite;
+    font-size: 1em;
+    margin: 0;
+    padding: 1.5em 1em;
+}
+
+#navbar li a:hover:not(.current),#navbar li a:focus:not(.current){
+    background-color: dimgray;
+}
+
+.current{
+    background-color: #111;
+}
+
+#logo{
+    height: 50px;
+    padding: .5em;
+}
+
+#hero-section{
+    background-color: rgb(230,230,230);
+    display: flex;
+    grid-column: 1/-1;
+    height: 60vh;
+}
+
+#hero-section span{
+    color: red;
+}
+
+div.column~img{
+    height:60vh;
+    width: 50vw;
+    display: grid;
+}
+
+.column{
+    width: 50vw;
+    text-align: center;
+    overflow: scroll;
+}
+
+h2{
+    font-family: 'Anton', sans-serif;
+    font-size:2.5em;
+    color: darkgoldenrod;
+    margin: 1em 2em;
+}
+h2~p,.column>ul{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+h2~p,.column>li{
+    margin: 1.75em 3em;
+}
+
+
+.button{
+    color: #333333;
+    list-style-type: none;
+    text-align: center;
+    width: 100px;
+    font-family: 'Anton', sans-serif;
+    border: darkgray solid 2px;
+    text-decoration: none;
+    background-image: linear-gradient(to top, darkgray 0%, lightsteelblue 100%);
+    padding:5px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px darkgoldenrod;
+}
+
+section{
+    grid-column: 1/-1;
+    margin-bottom: 3em;
+}
+
+#service-features{
+    font-family: 'Open Sans', sans-serif;
+    clear: both;
+    margin: 2em 0 1em;
+    text-align: center;
+}
+
+#service-features>p{
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 1em 0 .5em;
+
+}
+
+#four-features{
+    margin: 2em auto 1em;
+    width: 80vw;
+    display: flex;
+    text-align: center;
+}
+
+p,h4{
+    color: dimgray;
+}
+
+.feature>h4{
+    margin: 1em;
+    font-weight: bold;
+}
+
+.feature{
+    -webkit-column-break-inside: avoid;
+}
+
+.feature>p:first-child{
+    color: darkred;
+}
+
+.fas{
+    font-size: 2em;
+}
+
+footer{
+    grid-column: 1/-1;
+    margin-bottom: 2em;
+}
+
+#testimonial{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    color: darkgoldenrod;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size:30px;
+    font-weight: bold;
+}
+footer h3{
+    font-style: italic;
+}
+
+.box{
+    height: 250px;
+    width: 300px;
+    border: lightgray solid 1px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px gray;
+    text-align: center;
+    padding:25px 25px 25px;
+    margin: .25em;
+    overflow: auto;
+}
+
+.box>h4{
+    color: darkgoldenrod;
+    font-family: 'Dancing Script', cursive;
+    padding: 3px;
+}
+
+
+.box>h4+p{
+    padding: 10px;
+
+}
+
+.box img{
+    width: 50px;
+    height: 50px;
+    padding:2px;
+    border: 2px solid darkgoldenrod;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 980px){
+    h1 {
+        font-size: 1em;
+    }
+    #social-media-icon {
+        font-size: 1em;
+    }
+
+    #navbar > ul > li {
+        padding: .5em;
+    }
+    .column > h2 {
+        font-size: 1.5em;
+    }
+    #hero-section{
+        display: grid;
+        height: 80vh;
+    }
+    .column{
+        width: 100vw;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    #hero-section>img{
+        width: 93.5vw;
+        height: 35vh;
+        grid-column: 1/-1;
+        align-self: end;
+    }
+
+    #four-features {
+        margin: 2em auto;
+        display: grid;
+        text-align: center;
+        grid-column: 2/5;
+    }
+    #testimonial{
+        margin: 2em auto;
+        display: grid;
+        text-align: center;
+        grid-column: 2/5;
+    }
+}
+
+
+
+
