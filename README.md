@@ -1,0 +1,1 @@
+This is a responsive single-page landing page using HTML5 and CSS3.
